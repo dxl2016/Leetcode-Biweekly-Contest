@@ -24,8 +24,7 @@ class Solution(object):
                     if a == 1:
                         return i+1
                     else:
-                        i += 1
-                        
+                        i += 1                  
         return -1
        
                     
