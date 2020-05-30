@@ -4,4 +4,4 @@
 3. recursion + exit + temp = [] dynamic append
 4. rolling prefix-dict count++
 5.
-6.
+6. result = set(); result.add(int(s[i:i+k], 2))
