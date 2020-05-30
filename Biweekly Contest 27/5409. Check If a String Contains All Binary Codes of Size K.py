@@ -14,3 +14,10 @@ class Solution(object):
         for i in range(0, n_s-k+1):
             result.add(int(s[i:i+k], 2))
         return len(result) == (1<<k)
+
+    
+    
+    
+    
+    
+    
