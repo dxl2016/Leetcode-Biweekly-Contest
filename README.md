@@ -5,3 +5,5 @@
 4. rolling prefix-dict count++
 5. palindromic, check odd/even lengths
 6. result = set(); result.add(int(s[i:i+k], 2))
+7. dp, any(), all()
+8. course schedule, DFS/BFS, DP
