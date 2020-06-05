@@ -10,3 +10,4 @@
 9. traverse tree, DFS
 10. local_min, local_max grid search
 11. result = result % (10^9+7)
+12. dfs(node) + return + self.ans + accum |=
