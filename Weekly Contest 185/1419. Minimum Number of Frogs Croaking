@@ -1,0 +1,81 @@
+class Solution:
+    def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
+        frog_dict = ['c', 'r', 'o', 'a', 'k']
+        ans = {}
+        c = 0
+        
+        for k, s in enumerate(croakOfFrogs):
+            if s == 'c':
+                if 'k' not in ans:
+                    i = c
+                    c += 1
+                else:
+                    i = ans['k'].pop()
+                    if not ans['k']:
+                        ans.pop('k', None)
+                try:
+                    ans['c'].append(i)
+                except:
+                    ans['c'] = [i]
+            elif s == 'r':
+                if 'c' in ans:
+                    t = ans['c'].pop()
+                    try:
+                        ans['r'].append(t)
+                    except:
+                        ans['r'] = [t]
+                    
+                    if not ans['c']:
+                        ans.pop('c', None)
+                else:
+                    return -1
+            elif s == 'o':
+                if 'r' in ans:
+                    t = ans['r'].pop()
+                    try:
+                        ans['o'].append(t)
+                    except:
+                        ans['o'] = [t]
+                    
+                    if not ans['r']:
+                        ans.pop('r', None)
+                else:
+                    return -1
+            elif s == 'a':
+                if 'o' in ans:
+                    t = ans['o'].pop()
+                    try:
+                        ans['a'].append(t)
+                    except:
+                        ans['a'] = [t]
+                    
+                    if not ans['o']:
+                        ans.pop('o', None)
+                else:
+                    return -1
+            elif s == 'k':
+                if 'a' in ans:
+                    t = ans['a'].pop()
+                    try:
+                        ans['k'].append(t)
+                    except:
+                        ans['k'] = [t]
+                    
+                    if not ans['a']:
+                        ans.pop('a', None)
+                else:
+                    return -1
+            
+            
+        print(ans)    
+        for items in ans:
+            if items != 'k' and ans[items]:
+                return -1
+        
+        return len(ans['k'])
+            
+            
+        
+        
+        
+        
